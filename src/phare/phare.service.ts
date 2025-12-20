@@ -1,9 +1,11 @@
 import { Injectable } from '@nestjs/common';
-import { PhareRepository } from './PhareRepository';
+import { PhareRepository } from './phare.repository';
+
 @Injectable()
 export class PhareService {
-    constructor(private readonly pharseRepository:PhareRepository){}
-    turnOnPhare(){
-        this.pharseRepository.turnOn
+     constructor(private readonly phareRepo:PhareRepository){}
+
+    turnOn(){
+this.phareRepo.turnOn()
     }
 }

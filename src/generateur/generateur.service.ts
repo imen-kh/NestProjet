@@ -1,11 +1,11 @@
 import { Injectable } from '@nestjs/common';
-import { GenerateurRepository } from './GenerateurRepository';
+import { GenerateurRepository } from './generateur.repository';
+
 @Injectable()
 export class GenerateurService {
     constructor(private readonly generateurRepository:GenerateurRepository){}
- generatePower(){
-    this.generateurRepository.generatePower
- }
 
-
+generatePower(){
+    this.generateurRepository.generatePower()
+}
 }

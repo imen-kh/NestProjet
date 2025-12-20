@@ -1,9 +1,11 @@
 import { Injectable } from '@nestjs/common';
-import { AudioRepository } from './AudioRepository';
+import { AudioRepository } from './audio.repository';
+
 @Injectable()
 export class AudioService {
-    constructor(private readonly audioRepository:AudioRepository ){}
+    constructor(private readonly audioRepository:AudioRepository){}
+
     playMusic(){
-        this.audioRepository.playMusic();
+        this.audioRepository.playMusic()
     }
 }

@@ -5,14 +5,16 @@ import { MoteurService } from './moteur.service';
 export class MoteurController {
     constructor(private readonly moteurService:MoteurService){}
 
-@Get('start')
-startMoteur() {
-this.moteurService.startMoteur();
-return 'Moteur démarré';
+@Get('/start')
+startMoteur(){
+    this.moteurService.startMoteur()
+    return "Moteur Démarré"
 }
-@Get('status')
-getMoteurStatus() {
-return this.moteurService.getMoteurStatus();
+
+@Get('/status')
+statusMoteur(){
+   return this.moteurService.getStatusMoteur()
+    
 }
 
 }

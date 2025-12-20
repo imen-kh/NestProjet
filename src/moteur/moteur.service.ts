@@ -1,14 +1,17 @@
 import { Injectable } from '@nestjs/common';
-import { MoteurRepository } from './MoteurRepository';
+import { MoteurRepository } from './moteur.repository';
 
 @Injectable()
 export class MoteurService {
     constructor(private readonly moteurRepository:MoteurRepository){}
+
+
 startMoteur(){
-    this.moteurRepository.start();
+    this.moteurRepository.start()
 }
-getMoteurStatus(){
-    return this.moteurRepository.getStatus
+getStatusMoteur(){
+    this.moteurRepository.getStatus()
 }
 
 }
+

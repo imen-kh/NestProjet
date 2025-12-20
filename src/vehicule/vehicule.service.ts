@@ -1,14 +1,12 @@
 import { Injectable } from '@nestjs/common';
-import { PhareRepository } from 'src/phare/PhareRepository';
-import { AudioRepository } from 'src/audio/AudioRepository';
+import { VehiculeRepository } from './vehicule.repository';
+
 @Injectable()
 export class VehiculeService {
-    constructor(private readonly PhareRepository:PhareRepository,private readonly audioRepository:AudioRepository){}
+     constructor(private readonly vehiculeRepo:VehiculeRepository){}
 
 
-operatevehicule(){
-    this.PhareRepository.turnOn();
-    this.audioRepository.playMusic();
-    console.log('véhicule en fonctionnement');
+operateVehicule(){
+    this.vehiculeRepo.operate()
 }
 }

@@ -3,10 +3,11 @@ import { PhareService } from './phare.service';
 
 @Controller('phare')
 export class PhareController {
-    constructor(private readonly phareService: PhareService) {}
-@Get('turn-on')
-turnOnPhare() {
-this.phareService.turnOnPhare();
-return 'Phare allumé';
+        constructor(private readonly phareService:PhareService){}
+
+@Get("/turnOn")
+turnOnPhare(){
+    this.phareService.turnOn();
+    return "phare allumé"
 }
 }
